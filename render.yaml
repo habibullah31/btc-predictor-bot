@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: btc-predictor-bot
+    env: python
+    pythonVersion: 3.11
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: 8126978848:AAG4zNabbmUI_3iJhBYL7oc2lFNaIQozi0o
+      - key: CHAT_ID
+        value: 6040072765
